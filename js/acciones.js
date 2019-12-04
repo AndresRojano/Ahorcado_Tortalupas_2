@@ -1,12 +1,12 @@
 // JavaScript Document
 $(document).ready(function() {
 	document.addEventListener("deviceready",function(){
-	<plugin spec="https://github.com/triceam/LowLatencyAudio" source="git" />
-	audio = window.plugins.LowLatencyAudio;	
+	//<plugin spec="https://github.com/triceam/LowLatencyAudio" source="git" />
+	/*audio = window.plugins.LowLatencyAudio;	
 	audio.preloadFX('error', 'recursos/sonidos/error.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });	
 	audio.preloadFX('fail', 'recursos/sonidos/fail.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });	
 	audio.preloadFX('win', 'recursos/sonidos/win.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });
-	audio.preloadFX('acierto', 'recursos/sonidos/acierto.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });
+	audio.preloadFX('acierto', 'recursos/sonidos/acierto.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });*/
 
 
 	var abecedario= ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -204,5 +204,6 @@ $(document).ready(function() {
 			$('#btn_comenzar').trigger("click"); });
 			$('#contenedor_letras').show();
 	});
+	
 	});//dev ready
 }); //ready
