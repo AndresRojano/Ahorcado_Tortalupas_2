@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+		<title>Ahorcado</title>
+
+		<!--grupo CSS-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/estilo.css"/>
+		<link rel="stylesheet" href="css/animate.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<style>
+		.prueba{
+		font-size: 50px;
+		color: white;
+		}
+		
+		.prueba img{
+		width: 15%
+		}
+		</style>
+
+		<!--grupo JavaScript-->
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/acciones.js" type="text/javascript"></script>
+	    <script src="phonegap.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<!-- principal -->
+		<div data-role="page" id="Principal">   
+
+			<div role="main" class="ui-content">
+				<div id="menu" style="text-align:center;">
+				 
+				 <h1 style="color:#000; font-size:90px; text-shadow:0px 0px 12px yellow;" id="titu">AHORCADO</h1>
+				 
+					<div id ="opc"style="width:100%; text-align:center;">
+					
+						<div style="background: white; border-radius:5px; width:15%; display:inline-block; border: 2px groove green;">
+							<a style="color:#000; background:transparent;" href="#opciones"> Jugar </a>
+						</div>
+						
+						<br>
+						<br>
+						<div style="background: white; border-radius:5px; width:25%; display:inline-block; border: 2px groove green;">
+							<a style="color:#000; background:transparent;" href="#desarolladores"> Desarolladores </a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" id="desarolladores" style="background: linear-gradient(to top,#000 0%,#005670 100%);" >
+			<div role="main" class="ui-content">
+				<div style="color: #FFF;">
+					<p>TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS, TORTALUPAS.</p>
+				</div>
+				<div style="text-align:center;">
+					<a style="color: #000; background:white;" href="#Principal"> Principal </a>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false" style="background-color:black;">
+				<h4 style="color:#FFF; font-weight: normal;">5-G<br>Javier Rugerio Morales<br>Andres Rojano Martínez<br>Ian Pablo Rojas Hernández Lima<br>Brisa Rubí Sarmiento Suárez<br>Abigail Martínez Rosas<br>Y<br>Tortalupas</h4>
+			</div>
+		</div>
+		<!-- /principal -->
+		
+		
+		<!-- opciones -->
+		<div data-role="page" id="opciones" style="background: linear-gradient(to top,#000 0%,#005670 100%);" >
+		
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:transparent; color:#FFF;">
+				<h1> Ahorcado - 5G </h1>
+			</div>
+			
+			<div role="main" class="ui-content">
+			
+				<div id="boton_ip">
+					<input type="text" id="txtip" placeholder="Direccion IP" pattern="[0-9.]{,15}" style="width:70%;">
+					<input type="button" class="ui-btn" id="btn-buscar-colecciones" value="Buscar colecciones">
+				</div>
+				
+				<div id="cargando" style="text-align:center;">
+					<img src="images/ajax-loader.gif">
+				</div>
+				
+				<div id="seleccion-opciones">
+					<h2> Selecciona una coleccion: </h2>
+					<select id="selcoleccion" name="selcoleccion">
+					</select>
+					<h2> Dificultad: </h2>
+					<select id="selcuantas" name="selcuantas">
+						<option value="3"> Facil </option>
+						<option value="6"> Normal </option>
+						<option value="9"> Dificil </option>
+					</select>
+					<input type="button" class="ui-btn" id="btn-enviar" value="Seleccionar">
+				</div>
+				<div style="text-align:center;">
+					<a style="color: #000; background:white;" href="#Principal"> Principal </a>
+				</div>
+			
+			</div>
+		</div>
+		<!-- /opciones -->
+		
+		<!-- /opciones -->
+		<div data-role="page" id="jugar" style="background: linear-gradient(to top,#000 0%,#005670 100%);">
+		
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:transparent; color:#FFF;">
+				<a href="#Principal" class="ui-btn"> Principal </a>
+				<h3 style="font-weight: lighter;">
+					Palabras encontradas: <span id="encontradas">  </span>
+				
+				</h3>
+				<a href="#" id="btn_comenzar" class="ui-btn"> Comenzar </a>
+			</div>
+			
+			<div role="main" class="ui-content">
+				<div id="contenedor_imagen" style="text-align: center;" class="prueba">
+					<img id="imagen" src="">
+				</div>
+				
+				<div id="palabra" style="text-align: center; font-size: 30px; letter-spacing: 10px; color: white;">
+					&nbsp;
+				</div>
+				
+				<div id="contenedor_interfaz">
+					<div style="align: center;">
+						<div id="palabra_error" style="display: none;">
+									&nbsp;
+						</div>
+						
+						
+						<div id="contenedor_letras" style="display:none;text-align: center;  user-select: none;" class="prueba" >
+						
+						
+							<div id="anterior" style="display:inline;">
+								<i class="fa fa-chevron-left"></i>
+							</div>
+							<div style="display:inline;">
+							-
+							</div>
+							<div id="actual" style="display:inline;" >
+								
+							</div>
+							<div style="display:inline;">
+							-
+							</div>
+							<div id="siguiente" style="display:inline;">
+								<i class="fa fa-chevron-right"></i>
+							</div>
+							
+							
+						</div>
+						
+						
+						<div id="contendor_reiniciar" style="display: none;">
+							<a href="#" id="btn_reiniciar" class="ui-btn"> Reiniciar </a>
+						</div>
+						
+						
+						<div id="contendor_volver" style="display:none; text-align:center;">
+							<a href="#" id="btn_volver" class="ui-btn"> Quiere volver a jugar? </a>
+							<h1 style="color:white; font-weight: lighter; font-size:90%">Si desea cambiar dificultad, presione el boton "Principal".</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false" style="background:transparent; border-color:transparent; color:#FFF; font-shadow: 2px 2px 2px black; text-decoration:none;">
+				
+			</div>
+		</div>	
+	</body>
+</html> 
